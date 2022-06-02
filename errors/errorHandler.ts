@@ -11,7 +11,7 @@ export default (err: Error, req: Request, res: Response,next : NextFunction) => 
         `<html><body><h1>${err.code}</h1><h2>${err.message}</h2><h3>${err?.stack}</h3></body></html>`
       );
   } else {
-    //@ts-ignore)
+    //@ts-ignore
     if (isNaN(err.code)) {
       //@ts-ignore
       err.code = 500;
