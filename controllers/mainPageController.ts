@@ -3,7 +3,8 @@ import { Request, Response, NextFunction } from "express";
 class Ctrl {
   public mainPage(req: Request, res: Response, next: NextFunction) {
     try {
-      res.end(1)
+      /* test error handler 
+      res.end(1) */
       res.render("index.ejs", { ip: req.ip });
     } catch (err) {
       next(err);
